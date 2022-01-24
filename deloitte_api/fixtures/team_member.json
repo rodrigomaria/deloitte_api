@@ -1,0 +1,26 @@
+[
+    {
+        "model": "team_member.teammember",
+        "pk": 1,
+        "fields": {
+            "uuid": "f177c4e6-d12b-4bef-94b1-d8d524b88d4d",
+            "created": "2022-01-24 11:44:35.506717",
+            "name": "Rodrigo",
+            "function": "Developer",
+            "address": "Canoas",
+            "mobile": "51982266832"
+        }
+    },
+    {
+        "model": "team_member.teammember",
+        "pk": 2,
+        "fields": {
+            "uuid": "b88b9378-1e84-41c4-8495-170bda7ceabf",
+            "created": "2022-01-24 11:47:30.375630",
+            "name": "name",
+            "function": "function",
+            "address": "address",
+            "mobile": "phone_number"
+        }  
+    }
+]

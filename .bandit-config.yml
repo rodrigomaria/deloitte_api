@@ -1,0 +1,4 @@
+exclude_dirs:
+  - "deloitte_api/settings/*.py"
+  - "apps/**/migrations/*.py"
+  - "requirements"

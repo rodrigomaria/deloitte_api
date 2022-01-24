@@ -1,0 +1,20 @@
+[
+    {
+        "model": "post.post",
+        "pk": 1,
+        "fields": {
+            "uuid": "f177c4e6-d12b-4bef-94b1-d8d524b88d4d",
+            "created": "2022-01-24 11:44:35.506717",
+            "content": "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi"
+        }
+    },
+    {
+        "model": "post.post",
+        "pk": 2,
+        "fields": {
+            "uuid": "b88b9378-1e84-41c4-8495-170bda7ceabf",
+            "created": "2022-01-24 11:47:30.375630",
+            "content": "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi"
+        }
+    }
+]
