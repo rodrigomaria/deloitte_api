@@ -7,13 +7,13 @@ services:
       args:
         MODE: development
     environment:
-      DB_HOST: "database"
+      DB_HOST: "deloitte-database"
       DB_USERNAME: "root"
       DB_PASSWORD: ""
       SECRET_KEY: "!#dn=z-wh@)gw91+^*=uef_&oj5+cq$id(-lh^1y1=8k-pw+0g"
     container_name: deloitte-api
     depends_on:
-      - database
+      - deloitte-database
     volumes:
       - ./:/code
     ports:
@@ -21,12 +21,12 @@ services:
     stdin_open: true
     tty: true
 
-  database:
+  deloitte-database:
     platform: linux/x86_64
     image: percona
     volumes:
       - ./mysql_backup:/var/lib/mysql
-    container_name: database
+    container_name: deloitte-database
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     ports:

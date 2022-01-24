@@ -15,7 +15,11 @@
 ## Getting Started:
 ### Setup:
 
-* Build this project's containers and run fixtures using: `make build`
+* Build this project's containers: `make build`
+
+* Run DB and fixtures using: `make init`
+
+* Run the application using: `make run`
 
 * The server should be listening on `http://localhost:9999`
 

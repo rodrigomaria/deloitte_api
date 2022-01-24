@@ -30,10 +30,8 @@ help: ## show this help
 build: ## build application containers
 ifeq ($(ARGS), nocache)
 	@ docker-compose build --no-cache deloitte-api
-	@ make init
 else
 	@ docker-compose build deloitte-api
-	@ make init
 endif
 
 .PHONY: init
@@ -77,15 +75,15 @@ sh: run ## runs pure shell on application container
 	@ $(EXEC) sh
 
 .PHONY: db_initialize
-db_initialize: ## initialize the deloitte_api database
-	@ docker ps | grep percona || docker restart database
+db_initialize: ## initialize the database
+	@ docker ps | grep percona || docker restart deloitte-database
 	@ sleep 20
 	## create db deloitte_api
-	@ docker exec database mysql -u root -e "CREATE DATABASE IF NOT EXISTS deloitte_api;"
+	@ docker exec deloitte-database mysql -u root -e "CREATE DATABASE IF NOT EXISTS deloitte_api;"
 	## create root user db
-	@ docker exec database mysql -u root -e "CREATE USER IF NOT EXISTS 'root'@'%' IDENTIFIED BY 'root';"
+	@ docker exec deloitte-database mysql -u root -e "CREATE USER IF NOT EXISTS 'root'@'%' IDENTIFIED BY 'root';"
 	## grant all privileges root user
-	@ docker exec database mysql -u root -e "GRANT ALL PRIVILEGES ON deloitte_api.* TO 'root'@'%';"
+	@ docker exec deloitte-database mysql -u root -e "GRANT ALL PRIVILEGES ON deloitte_api.* TO 'root'@'%';"
 
 .PHONY: load_initial_data
 load_initial_data: ## load initial data
