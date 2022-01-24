@@ -35,8 +35,8 @@ class Migration(migrations.Migration):
                 ("mobile", models.CharField(blank=True, max_length=21, null=True)),
             ],
             options={
-                "verbose_name": "Service",
-                "verbose_name_plural": "Services",
+                "verbose_name": "Team Member",
+                "verbose_name_plural": "Team Members",
             },
         ),
     ]
