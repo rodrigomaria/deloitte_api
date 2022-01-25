@@ -5,7 +5,10 @@ from os import environ
 
 
 def main():
-    environ.setdefault("DJANGO_SETTINGS_MODULE", "deloitte_api.settings")
+    if "test" in sys.argv or "behave" in sys.argv:
+        environ.setdefault("DJANGO_SETTINGS_MODULE", "deloitte_api.testing")
+    else:
+        environ.setdefault("DJANGO_SETTINGS_MODULE", "deloitte_api.settings")
     try:
         from django.core.management import execute_from_command_line
     except ImportError:

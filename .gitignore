@@ -23,7 +23,7 @@ CACHE
 .cache
 .coverage
 static/
-iam_api/static/
+deloitte_api/static/
 htmlcov/
 
 *.egg
@@ -35,3 +35,4 @@ htmlcov/
 *.swp
 yamls
 mysql_backup/*
+deloitte_api.sqlite3

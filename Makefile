@@ -11,6 +11,7 @@ help: ## show this help
 	@echo 'Common sequence of commands:'
 	@echo '- make build'
 	@echo '- make init'
+	@echo '- make test'
 	@echo '- make run'
 	@echo '- make stop'
 	@echo '- make lint'
@@ -41,6 +42,10 @@ init: run ## Initialize application's DB and fixtures
 	@ make migrate
 	@ make collectstatic
 	@ make load_initial_data
+
+.PHONY : test
+test: ## run the application tests
+	@ $(EXEC) coverage run --rcfile=.coveragerc_behave manage.py behave --no-capture
 
 .PHONY : run
 run: ## start the application

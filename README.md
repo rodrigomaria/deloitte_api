@@ -27,6 +27,16 @@
 
 ---
 
+### Tests:
+
+* Integration tests (through behave BDD): `make test integration`
+
+You can run using: `make test`
+
+The tests are located under `tests` path.
+
+---
+
 ### Linters:
 deloitte-api has three code linters:
 
