@@ -83,7 +83,7 @@ deloitte-api uses two libraries in order to find potencial security breaches:
 ### OPCIONAIS BACK-END
 4. Autenticação de administrador para gerenciamento do conteúdo ✔️
 5. Documentação da API ✔️
-6. Testes automatizados ✖️
+6. Testes automatizados ✔️
 7. Deploy da aplicação ✖️
 
 ---
